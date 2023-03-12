@@ -21,7 +21,7 @@ standby which is optional you can run this for errors program it later maybee
 
 // Safeguard against wiring differences or future changes
 const int offsetA = 1; 
-const int offsetB = 1; 
+const int offsetB = -1; 
 
 // Set motor direction and speed 
 void setMotor(int motor, int direction, int speed) { 
