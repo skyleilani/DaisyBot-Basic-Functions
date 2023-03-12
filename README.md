@@ -1,4 +1,4 @@
-# DaisyBot Fundamental Functions 
+# DaisyBot Basic Functions 
 
 This project is part of Dr. Carlotta Berry's Robotics for the Streets initiative, aimed at making robotics more accessible to a wider audience. The goal of this project is to provide a basic setup for controlling the movement of a DaisyBot robot, using a simple circuit with two Dagu DG01D motors, an Arduino Mega, and a TB6612 driver IC on a breadboard.
 
