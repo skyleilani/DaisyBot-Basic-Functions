@@ -66,13 +66,57 @@ void setMotor(int motor, int direction, int speed) {
    }
 }
 
-
+// Initialize motor control pinss as outputs !
 void setup() {
-  // put your setup code here, to run once:
+  pinMode(AIN1, OUTPUT); 
+  pinMode(AIN2, OUTPUT); 
+  
+  pinMode(BIN1, OUTPUT); 
+  pinMode(BIN2, OUTPUT); 
 
+  pinMode(PWMA, OUTPUT); 
+  pinMode(PWMB, OUTPUT);  
 }
 
+// tests basic functionality repeatedly
 void loop() {
-  // put your main code here, to run repeatedly:
+  // move robot forward at half speed for 2 seconds 
+  setMotor(1, FORWARD, 128);
+  setMotor(2, FORWARD, 128); 
+  delay(2000); 
 
+  //stop robot for 1 second
+  setMotor(1, STOP, 0); 
+  setMotor(2, STOP, 0); 
+  delay(1000); 
+
+  // pivot the robot left at half speed for 2 seconds 
+  setMotor(1, FORWARD, 128); 
+  setMotor(2, BACKWARD, 128); 
+  delay(2000);
+   
+  // stop the robot for 1 second
+  setMotor(1, STOP, 0);
+  setMotor(2, STOP, 0);
+  delay(1000);
+  
+  // move the robot backward at half speed for 2 seconds
+  setMotor(1, BACKWARD, 128);
+  setMotor(2, BACKWARD, 128);
+  delay(2000);
+  
+  // stop the robot for 1 second
+  setMotor(1, STOP, 0);
+  setMotor(2, STOP, 0);
+  delay(1000);
+  
+  // pivot the robot right at half speed for 2 seconds
+  setMotor(1, BACKWARD, 128);
+  setMotor(2, FORWARD, 128);
+  delay(2000);
+
+  // stop the robot for 1 second
+  setMotor(1, STOP, 0);
+  setMotor(2, STOP, 0);
+  delay(1000);
 }
