@@ -5,9 +5,13 @@ This project is part of Dr. Carlotta Berry's Robotics for the Streets initiative
 This project is intended to demonstrate basic functionality only, without any sensors or additional features.
 
 ## Hardware Components
+
 2 x Dagu DG01D motors
+
 1 x Arduino Mega
+
 1 x TB6612 Driver IC on a breakout board
+
 1 x Breadboard
 
 ## Software Components
