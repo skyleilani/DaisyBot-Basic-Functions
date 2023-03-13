@@ -1,3 +1,7 @@
+/*
+ this script is for testing the connection between the TB6612 driver, Arduino Mega, and two Dagu DC motors only
+*/ 
+
 
 // pins for inputs, PWM defines must be on PWM pins 
 #define AIN1 2
