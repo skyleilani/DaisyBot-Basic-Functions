@@ -62,7 +62,7 @@ void setMotor(int motor, int direction, int speed) {
       digitalWrite(BIN2, LOW); 
     }
 
-    analogWrite(PWMB, speed+offsetB); 
+    analogWrite(PWMB, speed+offsetB);  // ensure motors run at the same speed 
    }
 }
 
