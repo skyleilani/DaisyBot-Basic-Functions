@@ -1,6 +1,6 @@
 # DaisyBot Basic Functions 
 
-This project is part of Dr. Carlotta Berry's Robotics for the Streets initiative, aimed at making robotics more accessible to a wider audience. The goal of this project is to provide a basic setup for controlling the movement of a DaisyBot robot, using a simple circuit with two Dagu DG01D motors, an Arduino Mega, and a TB6612 driver IC on a breadboard.
+This project is part of [Dr. Carlotta Berry](https://twitter.com/DrCABerry)'s Robotics for the Streets initiative, aimed at making robotics more accessible to a wider audience. The goal of this project is to provide a basic setup for controlling the movement of a DaisyBot robot, using a simple circuit with two Dagu DG01D motors, an Arduino Mega, and a TB6612 driver IC on a breadboard.
 
 This project is intended to demonstrate basic functionality only, without any sensors or additional features.
 
@@ -33,9 +33,6 @@ To install and run the code, follow these steps:
 4. Connect the hardware components according to the wiring diagram below.
 5. Open the set_motor_direction_and_speed.ino file in Arduino IDE and upload it to the Arduino Mega.
 6. Use the serial monitor in Arduino IDE to send commands to the DaisyBot.
-7. Wiring Diagram
-
-## Schematics & Wiring 
 
 ## Troubleshooting
 If you experience issues during installation or operation, try the following:
