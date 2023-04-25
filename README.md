@@ -4,6 +4,13 @@ This project is part of Dr. Carlotta Berry's Robotics for the Streets initiative
 
 This project is intended to demonstrate basic functionality only, without any sensors or additional features.
 
+### Dr. Berrys References and Learning Activities: 
+- [Amazon Robot Parts List](https://bit.ly/3XwBoR7)
+- [Project YouTube Playlist](http://bit.ly/3ZUBMKQ)
+- [Robot YouTube Playlist](http://bit.ly/3GXPJz0)
+- [Instructables Website](https://www.instructables.com/member/carlottaberry/)
+- [HacksterIo Website](https://www.hackster.io/berry123/)
+
 ## Hardware Components
 
 2 x Dagu DG01D motors
