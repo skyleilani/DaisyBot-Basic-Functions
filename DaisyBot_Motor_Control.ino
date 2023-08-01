@@ -80,29 +80,38 @@ void stopRobot() {
   setMotor(2, STOP, 0);
 }
 
-// Pivot right by running the left motor and not the right 
-void pivotRight(int speed) {
-  setMotor(1, FORWARD, speed);
-  setMotor(2, STOP, 0);
-}
+// Stationary pivot 
+void pivot(int direction, int speed){
+  if(direction == LEFT){
+    setMotor(1,STOP,speed);
+    setMotor(2,FORWARD,speed);
+    } else {
+      setMotor(1,FORWARD,speed);
+      setMotor(2,STOP,speed);
+      }
+  }
 
-// Pivot left by running right motor and not the left 
-void pivotLeft(int speed) {
-  setMotor(1, STOP, 0);
-  setMotor(2, FORWARD, speed);
-}
+// Gradual, curved pivot
+void slightPivot(int direction, int speedLeft, int speedRight){
+  if(direction == LEFT){
+    setMotor(1,FORWARD,speedRight);
+    setMotor(2,FORWARD,speedLeft);
+    } else { // Default: gradual right pivot
+      setMotor(1,FORWARD,speedLeft);
+      setMotor(2,FORWARD,speedRight);
+      }
+  }
 
-// Run both motors forward 
-void forward(int speed) {
-  setMotor(1, FORWARD, speed);
-  setMotor(2, FORWARD, speed);
-}
-
-// Run both motors backward 
-void backward(int speed) {
-  setMotor(1, BACKWARD, speed);
-  setMotor(2, BACKWARD, speed);
-}
+/ Move the robot in specified direction; default is forward 
+void move(int speed, int direction = FORWARD){
+  if(direction == FORWARD){
+    setMotor(1,FORWARD,speed);
+    setMotor(2,FORWARD, speed);
+    } else {
+      setMotor(1,BACKWARD, speed); 
+      setMotor(2,BACKWARD, speed); 
+      }
+  }
 
 // Initialize motor control pins as outputs 
 void setup() {
@@ -122,19 +131,19 @@ void setup() {
 // Repeat function testing 
 void loop() {
   
-  forward(128);
-  delay(2000); 
+  move(128); 
+  delay(500); 
   stopRobot();
-  delay(2000);
-  
-  pivotLeft(128); 
-  delay(2000); 
+  delay(500);
+
+  slightPivot(LEFT, 128, 255);
+  delay(500);
   stopRobot();
-  delay(2000); 
-  
-  pivotRight(128); 
-  delay(2000); 
+  delay(1000);
+
+  pivot(LEFT, 128); 
+  delay(500); 
   stopRobot();
-  delay(2000); 
+  delay(1000);
    
 }
